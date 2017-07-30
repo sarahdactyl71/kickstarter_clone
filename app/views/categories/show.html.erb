@@ -1,2 +1,2 @@
 <h1><%= @category.name %> </h1>
-<%= render 'helpers/project_card' %>
+<%= render partial: 'helpers/project_card', collection: @projects, as: :project %>
