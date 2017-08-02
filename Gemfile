@@ -21,19 +21,19 @@ gem 'figaro'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'rack-cors', require: 'rack/cors'
 gem 'handlebars_assets', '~> 0.23.2'
+gem 'faker'
+gem 'harry_potter_faker'
+gem 'materialize-rails'
 gem 'chart-js-rails'
 
 group :development, :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'rspec-rails'
-  gem 'harry_potter_faker'
   gem 'pry'
   gem 'awesome_print'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'faker'
-  gem 'materialize-rails'
   gem 'launchy'
   gem 'byebug', platform: :mri
 end
