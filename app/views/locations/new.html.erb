@@ -1,13 +1,15 @@
-<h1>Where will your project be located?</h1>
+<div class="container">
+  <h4>Where will your project be located?</h4>
 
-   <%= text_field_tag(:place_search, nil, placeholder: "Enter your address") %>
+  <%= text_field_tag(:place_search, nil, placeholder: "Enter your address") %>
 
-   <%= form_for @location, :html => {:multipart => true} do |f| %>
-     <%= text_field = f.text_field :city, placeholder: "City", id: 'locality' %>
-     <%= text_field = f.text_field :country, placeholder: "Country", id: 'country' %>
-     <%= text_field = f.text_field :postal_code, placeholder: "Postal Code", id: 'postal_code' %>
-     <%= f.submit "Continue to Project" %>
-   <% end %>
+  <%= form_for @location, :html => {:multipart => true} do |f| %>
+   <%= text_field = f.text_field :city, placeholder: "City", id: 'locality' %>
+   <%= text_field = f.text_field :country, placeholder: "Country", id: 'country' %>
+   <%= text_field = f.text_field :postal_code, placeholder: "Postal Code", id: 'postal_code' %>
+   <%= f.submit "Continue to Project" %>
+  <% end %>
+</div>
 
    <script>
      var componentForm = {
