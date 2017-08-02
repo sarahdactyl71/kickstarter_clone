@@ -23,22 +23,6 @@ video {
   filter: brightness(70%);
 }
 
-h3 {
-  color: #3cbc8d;
-  z-index: 1;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10%;
-  border: 3px solid #ffffff;
-  padding: 10px;
-  border-radius: 15px;
-  width: 700px;
-  letter-spacing: 3px;
-  font-size: 25px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 .navbar-custom .navbar-brand {
   color: #fed136;
   /*font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;*/
