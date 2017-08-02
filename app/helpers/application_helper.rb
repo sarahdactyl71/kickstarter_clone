@@ -14,20 +14,4 @@ module ApplicationHelper
     end
   end
 
-  def end_date(projects)
-    projects.sort { |a,b| a.days_remaining <=> b.days_remaining }
-  end
-
-  def sort_pledged(projects)
-    projects.sort { |a,b| b.total_pledged <=> a.total_pledged }
-  end
-
-  def sort_funding(projects)
-    projects.joins(:project_backers).group(:id).order('sum(pledge_amount)desc')
-  end
-
-  def by_magic(projects)
-    projects.all.shuffle
-  end
-
 end
