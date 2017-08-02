@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/logout',       to: "sessions#destroy"
   get '/confirmation', to: "confirmation#show"
   get '/about',        to: "pages#about"
+  get '/graphs',       to: "graphs#index"
 
   namespace :users, as: :user, path: 'users' do
     get '/:user_id/projects', to: "projects#index"

@@ -24,6 +24,7 @@ gem 'handlebars_assets', '~> 0.23.2'
 gem 'faker'
 gem 'harry_potter_faker'
 gem 'materialize-rails'
+gem 'chart-js-rails'
 
 group :development, :test do
   gem 'shoulda-matchers'
