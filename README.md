@@ -3,7 +3,7 @@
 ![alt text](http://i.imgur.com/kKjOsBk.jpg)
 ## Description
 
-This is a [Kickstarter](https://www.kickstarter.com/) clone. Users can create a project, browse other projects, and they can back a project if they so desire. The user can browse projects by categories, and from there can filter the categories by specific parameters. This project uses two factor authentication with twilio when a user logs in. When the user is updating a location for a project they create the fields are autofilled with geolocate from the google places API.
+This is a [Kickstarter](https://www.kickstarter.com/) clone. We used a brownfield codebase and implemented new features and other changes that enhance the user experience. Users can create a project, browse other projects, and they can back a project. The user can browse projects by categories, and from there can filter the categories by specific parameters. We included business intelligence from our custom API looking at statistics such as locations hosting the most projects. This project uses two factor authentication with twilio when a user logs in. When the user is updating a location for a project they create the fields are autofilled with geolocate from the google places API.
 
 ## Stack
 
