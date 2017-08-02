@@ -1,0 +1,21 @@
+<div class="card medium col s4 m3 l3">
+  <div class="card-image waves-effect waves-block waves-light style="max-height: 160px;">
+     <img src="{{image_url}}" class="activator responsive-img">
+  </div>
+  <div class="card-content" style="min-height: 265px;">
+    <span class="card-title activator grey-text text-darken-4" style="line-height: 25px;"><a href="/projects/{{slug}}">{{title}}</a></a></span><i class="material-icons right">more_vert</i></span>
+    <div class="progress">
+      <div class="determinate" style="width: {{percentage_pledged}}"></div>
+    </div>
+    <div class="project-stats">
+      <p><strong>${{total_pledged}}</strong> pledged</p>
+      <p><strong>{{percentage_pledged}} funded</p>
+      <p><strong>{{days_remaining}}</strong> days to go</p>
+      <p><strong>{{project_backers}}</strong> backers</p>
+    </div>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i></span>
+    {{description}}
+  </div>
+</div>
