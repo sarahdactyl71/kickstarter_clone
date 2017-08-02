@@ -16,7 +16,7 @@
 </div>
 
 <div class="container row">
-  <div class="card medium col s4">
+  <div class="card medium col s12">
    <h5>Most funded</h5>
    <%if @most_funded %>
     <div class="card-image waves-effect waves-block waves-light style="max-height: 160px;">
@@ -28,10 +28,11 @@
         <div class="determinate" style="width: <%= @most_funded.percentage_pledged %>%"></div>
       </div>
       <div class="project-stats">
-        <p><strong>$<%= number_with_delimiter(@most_funded.total_pledged, :delimiter => ',') %></strong> pledged</p>
-        <p><strong><%= @most_funded.percentage_pledged.round(0) %>%</strong> funded</p>
-        <p><strong><%= @most_funded.days_remaining %></strong> days to go</p>
-        <p><strong><%= @most_funded.project_backers.count %></strong> backers</p>
+        <p><strong>$<%= number_with_delimiter(@most_funded.total_pledged, :delimiter => ',') %></strong> pledged
+        <strong><%= @most_funded.percentage_pledged.round(0) %>%</strong> funded
+        <strong><%= @most_funded.days_remaining %></strong> days to go
+        <strong><%= @most_funded.project_backers.count %></strong> backers
+        </p>
       </div>
     </div>
     <div class="card-reveal">
@@ -39,9 +40,6 @@
       <%= @most_funded.description %>
     </div>
     <%end%>
-  </div>
-  <div class="card medium col s4">
-    <h5>Nearly Funded</h5>
   </div>
 </div>
 <%= render 'helpers/project_card' %>
