@@ -1,15 +1,15 @@
 <div class="container">
   <div class="col s3">
-    <div class="top-5-most-active">
-      <canvas id="Top5MostActive" width="400" height="400"></canvas>
+    <div class="biggest-donor">
+      <canvas id="biggestDonor" width="400" height="400"></canvas>
       <script>
-      var ctx = document.getElementById("Top5MostActive").getContext('2d');
-      const chartOptions = {
-        type: 'bar',
+      var ctx2 = document.getElementById("biggestDonor").getContext('2d');
+      const chartOptions2 = {
+        type: 'pie',
         data: {
           labels: [],
           datasets: [{
-            label: 'Top 5 Most Active Locations',
+            label: 'Top 5 Biggest Donors',
             data: [],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
@@ -41,23 +41,19 @@
       }
       $.ajax({
         method: 'GET',
-        url: '/api/v1/locations/location_with_most_projects',
-        success: function(response){ renderChart(response) },
+        url: '/api/v1/users/biggest_donor',
+        success: function(response){ renderChart2(response) },
         error: function(xhr,textStatus,errorThrown) { console.log(xhr,textStatus,errorThrown) }
       });
-      const renderChart = function(Top5MostActive){
-        for(var i = 0, len = Top5MostActive.length; i < len; i++) {
-          let location = Top5MostActive[i];
-          chartOptions.data.labels.push(location.city + " " + location.country);
-          chartOptions.data.datasets[0].data.push(location.project_count);
+      const renderChart2 = function(biggestDonor){
+        for(var i = 0, len = biggestDonor.length; i < len; i++) {
+          let donor = biggestDonor[i];
+          chartOptions2.data.labels.push(donor.name);
+          chartOptions2.data.datasets[0].data.push(donor.total_pledged);
         }
-        var myChart = new Chart(ctx, chartOptions);
+        var myChart2 = new Chart(ctx2, chartOptions2);
       }
       </script>
     </div>
   </div>
-</div>
-
-<div class="col s3">
-  <%= render partial: "biggest_donor" %>
 </div>
